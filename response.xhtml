@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Facelets RapidConta Response</title>
+        
+    </head>
+    <body>
+        
+        <form> 
+            
+            
+             <h:panelGrid  columns="1"
+                         cellpadding="15"
+                         cellspacing="5">
+                 
+                 <h:outputText  id="consec" value="Factura de Venta No: #{factura.consecutivo}"/>
+                 
+                  <h:outputText  id="fec" value="Fecha : #{factura.fecha}"/>
+                 
+                 
+                 
+                 
+                 
+                 
+             </h:panelGrid>
+            
+            <h:panelGrid   columns="2"  
+                         bodyrows="4"
+                         border="2"
+                         width="500"
+                         title="Informacion del Cliente"
+                         frame="border"
+                         cellspacing="5"
+                         cellpadding="5"
+                         
+                         >
+                
+                <f:facet name="header">
+            <h:outputText value="Informacion del Cliente"/>
+         </f:facet>
+                
+                <h:outputText  id="nombre" value="Cliente : #{factura.nombre}"/>
+                <h:outputText  id="nit" value="NIT : #{factura.nit}"/>
+                <h:outputText  id="direccion" value="Direccion : #{factura.direccion}"/>
+                <h:outputText  id="mediodepago" value="Medio de Pago : #{factura.mediodepago}"/>
+                <h:outputText  id="telefono" value="Telefono : #{factura.telefono}"/>
+                <h:outputText  id="ciudad" value="Ciudad : #{factura.ciudad}"/>
+                <h:outputText  id="contacto" value="Contacto : #{factura.contacto}"/>
+                <h:outputText  id="condpago" value="Condiciones de Pago : #{factura.condicionesdepago}"/>
+                
+            </h:panelGrid>
+            
+            
+            <h:panelGrid   columns="9"  
+                         bodyrows="4"
+                         border="2"
+                         width="800"
+                         title="Informacion del Servicio"
+                         frame="border"
+                         cellspacing="5"
+                         cellpadding="5"
+                         
+                         >
+                
+                <h:outputText  id="codigo" value="Codigo : #{factura.codigo}"/>
+                <h:outputText  id="servicio" value="Servicio : #{factura.servicio}"/>
+                <h:outputText  id="vrunitario" value="Vr $Unit : #{factura.valorunitario}"/>
+                <h:outputText  id="cantidad" value="Cantidad : #{factura.cantidad}"/>
+                <h:outputText  id="medida" value="Medida : #{factura.medida}"/>
+                <h:outputText  id="bodega" value="Bodega : #{factura.bodega}"/>
+                <h:outputText  id="iva" value="IVA : #{factura.iva}"/>
+                <h:outputText  id="rte" value="Rte : #{factura.rtefuente}"/>
+                <h:outputText  id="parcial" value="Parcial : #{factura.valorunitarioStr1}"/>
+                
+                
+            </h:panelGrid>
+            
+            <h:panelGrid columns="1"  
+                         bodyrows="4"
+                         border="2"
+                         width="500"
+                         title="Impuestos"
+                         frame="border"
+                         cellspacing="15"
+                         cellpadding="15"
+                         
+                         >
+                
+                <h:outputText  id="vbruto" value="Valor Bruto :#{factura.valorunitario} "/>
+                <h:outputText  id="iva" value="IVA : #{factura.valorunitarioStr} "/>
+                <h:outputText  id="rte" value="Rte Fuente : #{factura.rtefuente} "/> 
+                <h:outputText  id="total" value="TOTAL :#{factura.valorunitarioStr1} "/> 
+                
+            </h:panelGrid>
+        
+         <p> </p>
+         
+         <form>
+             
+        <h:commandButton id="back" value="Back" action="index" />
+        
+        
+         </form>
+        
+        </form>
+        
+        
+        
+    </body>
+</html>
