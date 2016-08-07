@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+
+    
+    <html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+        
+    <head>
+        <title>RapidConta</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        
+        <h:form> 
+        
+            <h:panelGrid columns="2"
+                         cellpadding="10"
+                         cellspacing="10">
+                
+                <h:graphicImage url="#{resource['images:fractal.jpg']}"
+                                alt="Mandala Logo screen" />
+                
+                <h1 > RapidConta </h1>
+                    
+            </h:panelGrid>
+        
+                 <h:panelGrid columns="2"
+                             cellpadding="10"
+                             cellspacing="10">
+                     
+                      <h:outputLabel value="Factura de Venta No:" />
+            <h:inputText id="facturaventa"
+                         title="Factura de Venta No:"
+                         value="#{factura.consecutivo}"
+                         required="true"
+                         requiredMessage="Error: A name is required."
+                         maxlength="25" />
+                     
+                      <h:outputLabel value="Fecha (dd/mm/aaa):" />
+            <h:inputText id="fecha"
+                         title="Fecha (dd/mm/aaa):"
+                         value="#{factura.fecha}"
+                         required="true"
+                         requiredMessage="Error: A name is required."
+                         maxlength="25" />
+                     
+                    
+                </h:panelGrid>
+            
+             <h:panelGrid columns="4"  
+                         bodyrows="10"
+                         border="2"
+                         width="500"
+                         title="Informacion del Cliente"
+                         frame="border"
+                         
+                         >
+                 
+                 <f:facet name="header">
+            <h:outputText value="Informacion del Cliente"/>
+         </f:facet>
+                 
+                    <h:outputLabel value="Nombre :" />
+
+                
+                 <h:inputText id="nombre"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.nombre}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                 
+                 
+                  <h:outputLabel value="NIT :" />
+
+                
+                 <h:inputText id="nit"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.nit}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                 
+                  
+                   <h:outputLabel value="Direccion :" />
+
+                
+                 <h:inputText id="direccion"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.direccion}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                  
+                   <h:outputLabel value="Medio de Pago :" />
+
+                
+                 <h:inputText id="mediodepago"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.mediodepago}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                  
+                    <h:outputLabel value="Telefono :" />
+
+                
+                 <h:inputText id="telefono"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.telefono}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                  
+                    <h:outputLabel value="Ciudad :" />
+
+                
+                 <h:inputText id="ciudad"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.ciudad}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                    
+                    <h:outputLabel value="Contacto :" />
+
+                
+                 <h:inputText id="contacto"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.contacto}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                    
+                    <h:outputLabel value="Condiciones de Pago :" />
+
+                
+                 <h:inputText id="condpago"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.condicionesdepago}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                    
+                  
+             </h:panelGrid>
+            
+              <h:panelGrid columns="10"  
+                         bodyrows="4"
+                         border="2"
+                         width="500"
+                         title="Informacion del Servicio"
+                         frame="border"
+                         
+                         >
+                  
+                   <f:facet name="header">
+            <h:outputText value="Informacion del Servicio"/>
+         </f:facet>
+                  
+                  <h:outputLabel value="Codigo :" />
+
+                
+                 <h:inputText id="codigo"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.codigo}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                    
+                  <h:outputLabel value="Servicio :" />
+
+                
+                 <h:inputText id="servicio"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.servicio}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                  
+                  <h:outputLabel value="Vr Unitario :" />
+
+                
+                 <h:inputText id="vrunitario"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.valorunitario}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                  
+                  <h:outputLabel value="Cantidad :" />
+
+                
+                 <h:inputText id="cantidad"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.cantidad}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                  
+                  
+                   <h:outputLabel value="Medida :" />
+
+                
+                 <h:inputText id="medida"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.medida}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                  
+                  <h:outputLabel value="Bodega :" />
+
+                
+                 <h:inputText id="bodega"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.bodega}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                  
+                  <h:outputLabel value="IVA :" />
+
+                
+                 <h:inputText id="iva"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.iva}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                  
+                  <h:outputLabel value="Rte :" />
+
+                
+                 <h:inputText id="rte"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.rtefuente}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                  
+                  <h:outputLabel value="Parcial :" />
+
+                
+                 <h:inputText id="parcial"
+                              required="false"
+                             maxlength="10"
+                             size="10"
+                             value="#{factura.parcial}"
+                             
+                             >
+                    
+                    
+                    
+              </h:inputText>
+                  
+              </h:panelGrid>
+            
+             <p></p>
+            <h:commandButton id="submit" value="Submit" 
+                             action="response"
+                             actionListener="#{factura.actionPerformed}"
+                             
+                             
+                             />
+            
+                             
+                            <!-- actionListener="#tiposSuelo.actionPerformed}" -->
+                             
+            <h:commandButton id="reset" value="Reset" type="reset" 
+                             />
+            
+        
+        
+        </h:form>
+    </body>
+</html>
